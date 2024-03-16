@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bank_operation_service
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  properties:
+    hibernate:
+      format_sql: true
+  messages:
+    basename: ValidationMessages
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: beans
+
+jwt:
+  access-token-key: '{"kty":"oct","kid":"3d96088b-8313-457c-80d0-6edb848eafde","k":"FR98UDQmCwYJQ9huH9ZuDmq8-dB217heQ_gOSb4alt4","alg":"HS256"}'
+  refresh-token-key: '{"kty":"oct","kid":"ac55062c-4791-4ef5-92af-41a834ea5872","k":"no9IZZwW6Alkqebw-k8K2UOt4mw5Tt1-XR7ITwIS2OI","alg":"HS256"}'
+
+logging:
+  level:
+    org.springframework.security: trace
