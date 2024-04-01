@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: BankServiceApplication
+
+server:
+  port: 8088
